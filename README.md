@@ -1,4 +1,5 @@
 no link a seguir segue o relatório da implementação do chatbot: https://docs.google.com/document/d/18Md9l57gMHjx74CO5zMkrx7Lm0NUo_nX0iQtcuTHTj4/edit?usp=sharing
+Arquivos que não forem mencionados no documento acima ou neste README são necessários para a execução do Google Cloud
 
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
 Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador ou me contatar em pedro.d.vas@gmail.com

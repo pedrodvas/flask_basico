@@ -3,6 +3,8 @@ no link a seguir segue o relatório da implementação do chatbot: https://docs.
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
 Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador ou me contatar em pedro.d.vas@gmail.com
 
+No teste das respostas a acurácia do LLM não foi tão grande, como pode ser visto no relatório.
+
 Instalação e uso(local): Para usar a aplicação localmente, é necessário ter python instalado, de preferência as versões 3.11 ou 3.12. A versão 3.11.8 tem um instalador pronto no site oficial do Python
 
 Com python instalado, é necessário instalar bibliotecas presentes apenas em requirements.txt caso queira apenas enviar prompts.

@@ -4,7 +4,6 @@ from groq import Groq
 
 
 def process_input(request):
-    '''
     pc = Pinecone(api_key="pcsk_4qyxrD_42QS74uKmJSp9uUBk1iPk7Gb3AsU4eoG3yRqFuZPUbSGFvgUdySAyQXJDKpM3xB")
 
     index_name = "index-unicamp"
@@ -66,5 +65,3 @@ def process_input(request):
     )
 
     return(chat_completion.choices[0].message.content)
-    '''
-    return("retornado!")

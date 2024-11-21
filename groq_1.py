@@ -46,12 +46,8 @@ if not pc.has_index(index_name):
 while not pc.describe_index(index_name).status['ready']:
     time.sleep(1)
 
-
-# Target the index where you'll store the vector embeddings
 index = pc.Index("index-unicamp")
 
-# Prepare the records for upsert
-# Each contains an 'id', the embedding 'values', and the original text as 'metadata'
 records = []
 for d, e in zip(data, embeddings):
     records.append({
@@ -60,16 +56,13 @@ for d, e in zip(data, embeddings):
         "metadata": {'text': d['text']}
     })
 
-# Upsert the records into the index
+
 index.upsert(
     vectors=records,
     namespace="example-namespace"
 )
 
-time.sleep(10)  # Wait for the upserted vectors to be indexed
-
-#print("Stats do index abaixo:")
-#print(index.describe_index_stats())
+time.sleep(10)
 
 query = "quantas vagas há para engenharia de computação ampla concorrência?"
 query_embedding = pc.inference.embed(
@@ -92,8 +85,6 @@ result = index.query(
 print(result)
 
 matched_info = ' '.join(item['metadata']['text'] for item in result['matches'])
-#sources = [item['metadata']['source'] for item in result['matches']]
-#context = f"Information: {matched_info} and the sources: {sources}"
 context = f"Information: {matched_info}"
 sys_prompt = f"""
 Instruções:

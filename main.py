@@ -1,18 +1,3 @@
-# Copyright 2015 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# [START gae_flex_quickstart]
 from flask import Flask, render_template, request
 from pinecone.grpc import PineconeGRPC as Pinecone
 import time
@@ -27,10 +12,10 @@ def chatbot(input):
     while not pc.describe_index(index_name).status['ready']:
         time.sleep(1)
 
-    # Target the index where you'll store the vector embeddings
-    index = pc.Index("index-unicamp")
+    #guardando as vector embeddings no índice especificado
+    index = pc.Index(index_name)
 
-    query = input
+    query = input   #processa a entrada do usuário
     query_embedding = pc.inference.embed(
         model="multilingual-e5-large",
         inputs=[query],
@@ -39,6 +24,7 @@ def chatbot(input):
         }
     )
 
+    #busca os 7 resultados mais relevantes para a resposta
     result = index.query(
         namespace="example-namespace",
         vector=query_embedding[0].values,
@@ -47,9 +33,8 @@ def chatbot(input):
         include_metadata=True
     )
 
+    #usa os resultados para dar contexto
     matched_info = ' '.join(item['metadata']['text'] for item in result['matches'])
-    #sources = [item['metadata']['source'] for item in result['matches']]
-    #context = f"Information: {matched_info} and the sources: {sources}"
     context = f"Information: {matched_info}"
     sys_prompt = f"""
     Instruções:
@@ -62,10 +47,11 @@ def chatbot(input):
     Contexto: {context}
     """
 
+
+    #dá o contexto e a entrada do usuário para o Groq
     client = Groq(
         api_key=("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"),  # This is the default and can be omitted
     )
-
     chat_completion = client.chat.completions.create(
         messages=[
             {
@@ -80,6 +66,7 @@ def chatbot(input):
         model="llama3-8b-8192",
     )
 
+    #retorna a resposta fornecida para a interface Flask
     return(chat_completion.choices[0].message.content)
 
 app = Flask(__name__)
@@ -94,21 +81,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-'''
-@app.route("/")
-def hello() -> str:
-    """Return a friendly HTTP greeting.
-
-    Returns:
-        A string with the words 'Hello World!'.
-    """
-    return "Hello World!"
-
-
-if __name__ == "__main__":
-    # This is used when running locally only. When deploying to Google App
-    # Engine, a webserver process such as Gunicorn will serve the app.
-    app.run(host="127.0.0.1", port=8080, debug=True)
-# [END gae_flex_quickstart]'''

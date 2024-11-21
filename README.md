@@ -4,7 +4,7 @@ Arquivos que não forem mencionados no documento acima ou neste README são nece
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
 Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador, ou então entrar no modo anônimo, ou me contatar em pedro.d.vas@gmail.com
 
-acurácia do LLM analisada no relatório.
+acurácia do LLM e segurança do projeto analisadas no relatório.
 
 Instalação e uso(local): Para usar a aplicação localmente, é necessário ter python instalado, de preferência as versões 3.11 ou 3.12. A versão 3.11.8 tem um instalador pronto no site oficial do Python
 

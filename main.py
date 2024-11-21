@@ -14,7 +14,9 @@
 
 # [START gae_flex_quickstart]
 from flask import Flask, render_template, request
-import chatbot
+
+def chatbot(input):
+    return "retorno"
 
 app = Flask(__name__)
 
@@ -23,7 +25,7 @@ def home():
     output = None
     if request.method == 'POST':
         user_input = request.form['user_input']
-        output = chatbot.process_input(user_input)  # Chama a função de processamento em main.py
+        output = chatbot(user_input)  # Chama a função de processamento em main.py
     return render_template('index.html', output=output)
 
 if __name__ == "__main__":

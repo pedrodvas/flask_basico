@@ -2,7 +2,7 @@ no link a seguir segue o relatório da implementação do chatbot: https://docs.
 Arquivos que não forem mencionados no documento acima ou neste README são necessários para a execução do Google Cloud. Ou seja, podem ser ignorados para testes.
 
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
-Pelo plano grátis, a estabilidade do sistema é péssima, portanto tente algumas vezes até conseguir a saída esperada. No caso de erro 500, tente trocar de navegador, ou então entrar no modo anônimo, ou me contatar em pedro.d.vas@gmail.com para que o erro seja resolvido.
+Pelo plano grátis, a estabilidade do sistema é péssima, portanto tente algumas vezes até conseguir a saída esperada. No caso de erro 500, tente trocar de navegador, ou então entrar no modo anônimo, ou me contatar em pedro.d.vas@gmail.com para que o erro seja resolvido. Quase sempre está relacionado ao plano do Groq, e basta mudar o modelo para que o funcionamento volte ao normal.
 
 acurácia do LLM e segurança do projeto analisadas no relatório.
 

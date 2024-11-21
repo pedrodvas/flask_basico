@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Flask com Entrada de Texto</title>
+</head>
+<body>
+    <h1>Entrada de Texto</h1>
+    <form method="POST">
+        <label for="user_input">Digite algo:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if output %}
+        <h2>Saída:</h2>
+        <p>{{ output }}</p>
+    {% endif %}
+</body>
+</html>

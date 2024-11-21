@@ -10,3 +10,4 @@ google
 google-cloud
 protobuf
 googleapis-common-protos
+protoc-gen-openapiv2

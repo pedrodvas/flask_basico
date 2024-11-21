@@ -30,7 +30,7 @@ def chatbot(input):
     # Target the index where you'll store the vector embeddings
     index = pc.Index("index-unicamp")
 
-    query = request
+    query = input
     query_embedding = pc.inference.embed(
         model="multilingual-e5-large",
         inputs=[query],

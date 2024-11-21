@@ -1,6 +1,7 @@
 no link a seguir segue o relatório da implementação do chatbot: https://docs.google.com/document/d/18Md9l57gMHjx74CO5zMkrx7Lm0NUo_nX0iQtcuTHTj4/edit?usp=sharing
 
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
+Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador ou me contatar em pedro.d.vas@gmail.com
 
 Instalação e uso(local): Para usar a aplicação localmente, é necessário ter python instalado, de preferência as versões 3.11 ou 3.12. A versão 3.11.8 tem um instalador pronto no site oficial do Python
 

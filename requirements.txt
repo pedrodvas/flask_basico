@@ -9,3 +9,4 @@ grpcio
 google
 google-cloud
 protobuf
+googleapis-common-protos

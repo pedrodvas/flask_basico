@@ -2,7 +2,7 @@ no link a seguir segue o relatório da implementação do chatbot: https://docs.
 Arquivos que não forem mencionados no documento acima ou neste README são necessários para a execução do Google Cloud. Ou seja, podem ser ignorados para testes.
 
 Uso (web): A aplicação pode ser testada remotamente a partir do link: https://chatbot-vestibular.rj.r.appspot.com/
-Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador ou me contatar em pedro.d.vas@gmail.com
+Pelo plano grátis, não há boa estabilidade. No caso de erro 500, tente trocar de navegador, ou então entrar no modo anônimo, ou me contatar em pedro.d.vas@gmail.com
 
 acurácia do LLM analisada no relatório.
 

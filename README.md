@@ -6,7 +6,7 @@ Pelo plano grátis, a estabilidade do sistema é péssima, portanto tente alguma
 
 acurácia do LLM e segurança do projeto analisadas no relatório.
 
-Instalação e uso(local): Para usar a aplicação localmente, é necessário ter python instalado, de preferência as versões 3.11 ou 3.12. A versão 3.11.8 tem um instalador pronto no site oficial do Python
+Instalação e uso(local): Para usar a aplicação localmente, é necessário ter python instalado, de preferência as versões 3.11 ou 3.12. A versão 3.11.8 tem um instalador pronto no site oficial do Python em https://www.python.org/downloads/release/python-3118/
 
 Com python instalado, é necessário instalar bibliotecas presentes apenas em requirements.txt caso queira apenas enviar prompts.
 Caso também queira mudar o contexto disponível no banco de dados também são necessárias as bibliotecas PyPDF2 e Pandas.

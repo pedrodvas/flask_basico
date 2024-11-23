@@ -14,3 +14,5 @@ Caso também queira mudar o contexto disponível no banco de dados também são 
 Para o caso de uso de apenas entradas para o LLM, basta rodar o main.py locamente, onde um link será gerado e o teste pode ser feito.
 
 Para o caso com alteração do Banco de Dados e uma entrada do LLM, basta rodar o programa groq_1.py, alterando a variável query conforme necessário. Entretando este programa NÃO foi feito para o usuário final, e sim apenas para desenvolvimento e criação do banco de dados no Pinecone. Além disso este programa contém apenas a lógica, então as saídas são dadas no terminal (uma saída sobre contextos e outra sobre a resposta final)
+
+Observação: o front end não foi trabalhado pois não considerado um critério de avaliação no documento disponibilizado.
